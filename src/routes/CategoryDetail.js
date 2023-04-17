@@ -12,12 +12,21 @@ const CategoryDetail = () => {
   const pokemons = useSelector((state) => state.pokemonsOfType);
   return (
     <>
-      <NavLink to="/pokemon/1">Pokemon detail</NavLink>
       <p>
         List of pokemons of category:
         {typeId}
       </p>
-      {pokemons.map((element) => <p key={element.pokemon.url}>{element.pokemon.name}</p>)}
+      {pokemons.map((element) => {
+        const pokemonId = element.pokemon.url.replace('https://pokeapi.co/api/v2/pokemon/', '');
+        return (
+          <NavLink
+            key={element.pokemon.url}
+            to={`/pokemon/${pokemonId}`}
+          >
+            {element.pokemon.name}
+          </NavLink>
+        );
+      })}
     </>
   );
 };
