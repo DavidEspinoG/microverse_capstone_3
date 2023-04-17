@@ -11,10 +11,10 @@ const fetchCategories = createAsyncThunk(
 
 const fetchPokemonsOfType = createAsyncThunk(
   'pokemons/fetchPokemonsOfType',
-  async (url) => {
-    const res = await fetch(url);
+  async (typeId) => {
+    const res = await fetch(`https://pokeapi.co/api/v2/type/${typeId}`);
     const data = await res.json();
-    return data;
+    return data.pokemon;
   },
 );
 
@@ -40,6 +40,18 @@ const pokemonSlice = createSlice({
       .addCase(fetchCategories.rejected, (state) => {
         state.error = true;
         state.loading = false;
+      })
+      .addCase(fetchPokemonsOfType.pending, (state) => {
+        state.error = false;
+        state.loading = true;
+      })
+      .addCase(fetchPokemonsOfType.fulfilled, (state, action) => {
+        state.pokemonsOfType = action.payload;
+        state.loading = false;
+      })
+      .addCase(fetchPokemonsOfType.rejected, (state) => {
+        state.loading = false;
+        state.error = true;
       });
   },
 });

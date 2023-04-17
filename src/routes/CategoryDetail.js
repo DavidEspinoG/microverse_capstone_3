@@ -7,8 +7,8 @@ const CategoryDetail = () => {
   const { typeId } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchPokemonsOfType());
-  }, []);
+    dispatch(fetchPokemonsOfType(typeId));
+  }, [dispatch, typeId]);
   return (
     <>
       <p>
