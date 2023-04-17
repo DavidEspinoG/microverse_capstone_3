@@ -1,7 +1,13 @@
 import { useParams, NavLink } from 'react-router-dom';
-
+// import { useEffect } from 'react';
 const CategoryDetail = () => {
   const { categoryId } = useParams();
+
+  // useEffect(() => {
+  //   const fetchCategories = async () => {
+  //     cons
+  //   }
+  // }, [])
   return (
     <>
       <p>
