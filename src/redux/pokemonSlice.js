@@ -9,6 +9,15 @@ const fetchCategories = createAsyncThunk(
   },
 );
 
+const fetchPokemonsOfType = createAsyncThunk(
+  'pokemons/fetchPokemonsOfType',
+  async (url) => {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
+  },
+);
+
 const pokemonSlice = createSlice({
   name: 'pokemons',
   initialState: {
@@ -17,7 +26,6 @@ const pokemonSlice = createSlice({
     pokemon_detailed: [],
     loading: false,
     error: false,
-    data: '',
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -26,8 +34,7 @@ const pokemonSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchCategories.fulfilled, (state, action) => {
-        console.log(action.payload);
-        state.data = action.payload;
+        state.types = action.payload;
         state.loading = false;
       })
       .addCase(fetchCategories.rejected, (state) => {
@@ -38,4 +45,4 @@ const pokemonSlice = createSlice({
 });
 
 export default pokemonSlice;
-export { fetchCategories };
+export { fetchCategories, fetchPokemonsOfType };

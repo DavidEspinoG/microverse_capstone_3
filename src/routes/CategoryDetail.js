@@ -1,23 +1,24 @@
 import { useParams, NavLink } from 'react-router-dom';
-// import { useEffect } from 'react';
-const CategoryDetail = () => {
-  const { categoryId } = useParams();
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchPokemonsOfType } from '../redux/pokemonSlice';
 
-  // useEffect(() => {
-  //   const fetchCategories = async () => {
-  //     cons
-  //   }
-  // }, [])
+const CategoryDetail = () => {
+  const { typeId } = useParams();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPokemonsOfType());
+  }, []);
   return (
     <>
       <p>
         Category id:
-        {categoryId}
+        {typeId}
       </p>
       <NavLink to="/pokemon/1">Pokemon detail</NavLink>
       <p>
         List of pokemons of category:
-        {categoryId}
+        {typeId}
       </p>
     </>
   );
