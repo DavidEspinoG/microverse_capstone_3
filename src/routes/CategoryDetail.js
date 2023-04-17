@@ -2,9 +2,10 @@ import { useParams, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchPokemonsOfType } from '../redux/pokemonSlice';
+import Header from '../components/Header';
 
 const CategoryDetail = () => {
-  const { typeId } = useParams();
+  const { typeId, typeName } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPokemonsOfType(typeId));
@@ -12,10 +13,7 @@ const CategoryDetail = () => {
   const pokemons = useSelector((state) => state.pokemonsOfType);
   return (
     <>
-      <p>
-        List of pokemons of category:
-        {typeId}
-      </p>
+      <Header title={`Type: ${typeName}`} />
       {pokemons.map((element) => {
         const pokemonId = element.pokemon.url.replace('https://pokeapi.co/api/v2/pokemon/', '');
         return (

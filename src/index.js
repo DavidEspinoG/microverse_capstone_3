@@ -7,7 +7,7 @@ import Home from './routes/Home';
 import CategoryDetail from './routes/CategoryDetail';
 import PokemonDetail from './routes/PokemonDetail';
 import store from './redux/store';
-import Categories from './components/Categories';
+import Categories from './routes/Categories';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         element: <Categories />,
       },
       {
-        path: '/type/:typeId',
+        path: '/type/:typeId/:typeName',
         element: <CategoryDetail />,
       },
       {
