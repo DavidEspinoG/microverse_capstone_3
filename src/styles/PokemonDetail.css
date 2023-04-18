@@ -1,0 +1,31 @@
+.pokemon-detail-image-container {
+  background-color: var(--pink-one);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-detail-image {
+  width: 150px;
+}
+
+.pokemon-abilities-container .pokemon-feature-container:nth-child(odd) {
+  background-color: var(--pink-one);
+}
+
+.pokemon-abilities-container .pokemon-feature-container:nth-child(even) {
+  background-color: var(--pink-two);
+}
+
+.pokemon-feature-text {
+  margin: 0;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.pokemon-feature-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
