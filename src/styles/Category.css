@@ -1,5 +1,5 @@
 .category {
-  background-color: var(--pink-two);
+  /* background-color: var(--pink-two); */
   height: 120px;
   display: flex;
   justify-content: flex-end;
@@ -8,7 +8,11 @@
   padding-bottom: 10px;
 }
 
-.category:nth-of-type(odd) {
+.light-category {
+  background-color: var(--pink-two);
+}
+
+.dark-category {
   background-color: var(--pink-three);
 }
 

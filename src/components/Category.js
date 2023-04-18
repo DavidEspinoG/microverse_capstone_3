@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Category = ({
-  name, to, url,
+  name, to, url, color
 }) => {
   const [pokeNumber, setNumber] = useState(0);
   useEffect(() => {
@@ -17,7 +17,7 @@ const Category = ({
   }, [pokeNumber, url]);
 
   return (
-    <div className="category">
+    <div className={`category ${color}`}>
       <div>
         <NavLink
           className="category-name"
@@ -35,6 +35,10 @@ Category.propTypes = {
   name: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
+Category.defaultParams = {
+  color: '',
+};
 export default Category;
