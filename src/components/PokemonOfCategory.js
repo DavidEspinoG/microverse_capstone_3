@@ -1,20 +1,24 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/PokemonsPerCategory.css';
 
 const PokemonOfCategory = ({ name, url, cssClass }) => {
+  const [power, setPower] = useState(0);
   useEffect(() => {
     const fetchPokemonPower = async () => {
       const res = await fetch(url);
       const data = await res.json();
-      return data;
+      setPower(data.base_experience);
     };
     fetchPokemonPower();
   });
   return (
     <div className={`pokemon-of-category-container ${cssClass}`}>
       <p className="pokemon-of-category-name">{name}</p>
-      <p className="pokemon-of-category-power">Power: 122</p>
+      <p className="pokemon-of-category-power">
+        Power:
+        {power}
+      </p>
     </div>
   );
 };
