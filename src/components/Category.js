@@ -20,7 +20,7 @@ const Category = ({
   return (
     <Link to={to} className="category-link">
       <div className={`category ${color}`}>
-        <RandomLogo />
+        <RandomLogo cssClass="category-logo" />
         <div>
           <p
             className="category-name"
