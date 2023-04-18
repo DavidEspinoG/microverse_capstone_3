@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
 import Category from '../components/Category';
 import chessClasses from '../utils/chessClasses';
+import SearchInput from '../components/SearchInput';
 
 const Categories = () => {
   const types = useSelector((state) => state.types);
@@ -11,6 +12,7 @@ const Categories = () => {
   return (
     <>
       <Header title="Pokemon types" />
+      <SearchInput />
       <Subtitle text="Pokemon types" />
       <div className="categories-container">
         {types.map((element, index) => {

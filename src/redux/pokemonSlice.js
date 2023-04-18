@@ -35,8 +35,13 @@ const pokemonSlice = createSlice({
     pokemonDetailed: [],
     loading: false,
     error: false,
+    search: '',
   },
-  reducers: {},
+  reducers: {
+    updateSearch: (state, action) => {
+      state.search = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCategories.pending, (state) => {
