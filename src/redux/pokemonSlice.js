@@ -43,6 +43,7 @@ const pokemonSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchCategories.fulfilled, (state, action) => {
+        action.payload.splice(action.payload.length - 2, 2);
         state.types = action.payload;
         state.loading = false;
       })

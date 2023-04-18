@@ -1,0 +1,25 @@
+.category {
+  background-color: var(--pink-two);
+  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 17px;
+  padding-bottom: 10px;
+}
+
+.category:nth-of-type(odd) {
+  background-color: var(--pink-three);
+}
+
+.category-name {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.category-number {
+  margin: 0;
+  color: var(--white);
+}

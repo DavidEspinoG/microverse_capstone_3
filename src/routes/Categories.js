@@ -1,7 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import '../styles/Categories.css';
 import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
+import Category from '../components/Category';
 
 const Categories = () => {
   const types = useSelector((state) => state.types);
@@ -11,14 +12,15 @@ const Categories = () => {
       <Subtitle text="Pokemon types" />
       <div className="categories-container">
         {types.map((element) => {
-          const endpoint = element.url.replace('https://pokeapi.co/api/v2/', '');
+          const cleanedUrl = element.url.replace('https://pokeapi.co/api/v2/', '');
+          const to = `${cleanedUrl}${element.name}`;
           return (
-            <NavLink
-              to={`${endpoint}${element.name}`}
+            <Category
+              name={element.name}
+              to={to}
               key={element.url}
-            >
-              {element.name}
-            </NavLink>
+              url={element.url}
+            />
           );
         })}
       </div>
