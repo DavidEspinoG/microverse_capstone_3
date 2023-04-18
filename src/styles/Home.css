@@ -1,0 +1,5 @@
+.main-container {
+  width: 345px;
+  margin: 100px auto;
+  overflow: scroll;
+}

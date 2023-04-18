@@ -1,0 +1,12 @@
+.subtitle-container {
+  background-color: var(--pink-two);
+  color: white;
+  padding: 3px 2px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 11px;
+  margin: 0;
+  font-weight: 400;
+}

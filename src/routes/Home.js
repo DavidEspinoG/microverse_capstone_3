@@ -1,3 +1,4 @@
+import '../styles/Home.css';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -9,9 +10,9 @@ const Home = () => {
     dispatch(fetchCategories());
   }, [dispatch]);
   return (
-    <>
+    <div className="main-container">
       <Outlet />
-    </>
+    </div>
   );
 };
 
