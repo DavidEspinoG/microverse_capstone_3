@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import '../styles/Category.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import RandomLogo from '../utils/randomSvg';
 
@@ -18,18 +18,19 @@ const Category = ({
   }, [pokeNumber, url]);
 
   return (
-    <div className={`category ${color}`}>
-      <RandomLogo />
-      <div>
-        <NavLink
-          className="category-name"
-          to={to}
-        >
-          {name}
-        </NavLink>
-        <p className="category-number">{pokeNumber}</p>
+    <Link to={to} className="category-link">
+      <div className={`category ${color}`}>
+        <RandomLogo />
+        <div>
+          <p
+            className="category-name"
+          >
+            {name}
+          </p>
+          <p className="category-number">{pokeNumber}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -5,6 +5,10 @@
   background-color: var(--pink-one);
   color: var(--white);
   padding: 0 10px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .header h3 {
