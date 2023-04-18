@@ -1,5 +1,4 @@
 .category {
-  /* background-color: var(--pink-two); */
   height: 120px;
   display: flex;
   justify-content: flex-end;
@@ -9,11 +8,11 @@
 }
 
 .light-category {
-  background-color: var(--pink-two);
+  background-color: var(--pink-one);
 }
 
 .dark-category {
-  background-color: var(--pink-three);
+  background-color: var(--pink-two);
 }
 
 .category-name {
@@ -26,4 +25,9 @@
 .category-number {
   margin: 0;
   color: var(--white);
+}
+
+.category-logo {
+  width: 50px;
+  fill: red;
 }

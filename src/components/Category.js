@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import '../styles/Category.css';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import RandomLogo from '../utils/randomSvg';
 
 const Category = ({
-  name, to, url, color
+  name, to, url, color,
 }) => {
   const [pokeNumber, setNumber] = useState(0);
   useEffect(() => {
@@ -18,6 +19,7 @@ const Category = ({
 
   return (
     <div className={`category ${color}`}>
+      <RandomLogo />
       <div>
         <NavLink
           className="category-name"
@@ -35,10 +37,7 @@ Category.propTypes = {
   name: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  color: PropTypes.string,
+  color: PropTypes.string.isRequired,
 };
 
-Category.defaultParams = {
-  color: '',
-};
 export default Category;
