@@ -36,10 +36,14 @@ const pokemonSlice = createSlice({
     loading: false,
     error: false,
     search: '',
+    filtered: [],
   },
   reducers: {
     updateSearch: (state, action) => {
       state.search = action.payload;
+    },
+    updateFiltered: (state, action) => {
+      state.filtered = action.payload;
     },
   },
   extraReducers: (builder) => {

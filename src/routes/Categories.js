@@ -8,6 +8,8 @@ import SearchInput from '../components/SearchInput';
 
 const Categories = () => {
   const types = useSelector((state) => state.types);
+  const filtered = useSelector((state) => state.filtered);
+  const elements = filtered.length === 0 ? types : filtered;
   const classes = chessClasses(types.length);
   return (
     <>
@@ -15,7 +17,7 @@ const Categories = () => {
       <SearchInput />
       <Subtitle text="Pokemon types" />
       <div className="categories-container">
-        {types.map((element, index) => {
+        {elements.map((element, index) => {
           const cleanedUrl = element.url.replace('https://pokeapi.co/api/v2/', '');
           const to = `${cleanedUrl}${element.name}`;
           return (
