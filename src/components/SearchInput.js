@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import pokemonSlice from '../redux/pokemonSlice';
 import '../styles/SearchInput.css';
-import filterState from './FilterState';
-
+import filterState from '../utils/filterState';
 const { updateFiltered } = pokemonSlice.actions;
 
 const SearchInput = () => {
