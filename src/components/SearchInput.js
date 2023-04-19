@@ -16,6 +16,7 @@ const SearchInput = () => {
         value={search}
         onChange={handleChange}
         className="search-input"
+        placeholder="Search Pokemon Type"
       />
     </div>
   );

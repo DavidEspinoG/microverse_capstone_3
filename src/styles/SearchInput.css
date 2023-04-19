@@ -7,4 +7,5 @@
   height: 30px;
   border: 1px solid var(--yellow);
   outline: none;
+  color: gray;
 }
