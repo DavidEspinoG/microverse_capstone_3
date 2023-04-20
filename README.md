@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Math magician ](#-capstone_project_2_api-)
+- [📖 Microdex ](#-capstone_project_2_api-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -24,30 +24,28 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians <a id="about-project"></a>
+# 📖 Microdex <a id="about-project"></a>
 
-SPA created using React.js, it includes it's own calculator, a home page and a Quote Section. 
+SPA created using React and Redux. The page displays a list of Pókemons organized per categories, shows all the available Pokémons for each category and the detail of every Pokémon. 
 
 ## 🛠 Built With <a id="built-with"></a>
 
 ### Tech Stack <a id="tech-stack"></a>
 
-> HTML & SCSS
-> Javascript
 > React
+> Redux
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML, SCSS & React</a></li>
+    <li><a href="#">React and Redux</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="#">N/A</a></li>
-    <li><a href="#">N/A</a></li>
+    <li><a href="#">Pokeapi</a></li>
   </ul>
 </details>
 
@@ -62,18 +60,15 @@ SPA created using React.js, it includes it's own calculator, a home page and a Q
 
 ### Key Features <a id="key-features"></a>
 
-- Calculator
-- Quote section
+- Shows every available Pokémon category
+- Shows every Pokémon of each category
+- Shows detailed information about every Pokémon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-
-- [Live demo](https://math-magicians-pqa2.onrender.com/)
-
+- [Live demo](https://microdex.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,36 +84,25 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 > git clone https://github.com/DavidEspinoG/math_magicians.git
-> (you can open it via live server in VS)
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-> git clone https://github.com/DavidEspinoG/math_magicians.git
-
-### Install
-
-Install this project with:
-
-npm install
+> npm i
 
 ### Usage
 
-To run the project just open it in VS and run liveServer
+> npm run start
 
 
 ### Run tests
 
-To run tests, run the following command:
+> npm run test
 
-npm run fix
+### Build
 
-### Deployment
+You can deploy this project using the following command: 
+> npm run build
 
-You can deploy this project using:
-
-use chosen hosting service or github pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,8 +123,7 @@ use chosen hosting service or github pages
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-
-- Nicer styling is going to be implemented
+- Desktop version is going to be implemented
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
