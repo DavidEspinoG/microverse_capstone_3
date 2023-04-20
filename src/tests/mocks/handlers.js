@@ -99,6 +99,12 @@ const handlers = [
     ctx.status(200),
     ctx.json(mockTypes),
   )),
+  rest.get('https://pokeapi.co/api/v2/pokemon/16/', (req, res, ctx) => res(
+    ctx.status(200),
+    ctx.json({
+      base_experience: 50,
+    }),
+  )),
 ];
 
 export default handlers;

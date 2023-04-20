@@ -11,7 +11,7 @@ const PokemonOfCategory = ({ name, url, cssClass }) => {
       setPower(data.base_experience);
     };
     fetchPokemonPower();
-  });
+  }, [url]);
   return (
     <div className={`pokemon-of-category-container ${cssClass}`}>
       <p className="pokemon-of-category-name">{name}</p>

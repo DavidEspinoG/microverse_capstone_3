@@ -8,8 +8,9 @@ import SearchInput from '../components/SearchInput';
 
 const Categories = () => {
   const types = useSelector((state) => state.types);
+  const searchText = useSelector((state) => state.search);
   const filtered = useSelector((state) => state.filtered);
-  const elements = filtered.length === 0 ? types : filtered;
+  const elements = filtered.length === 0 && searchText === '' ? types : filtered;
   const classes = chessClasses(types.length);
   return (
     <>
