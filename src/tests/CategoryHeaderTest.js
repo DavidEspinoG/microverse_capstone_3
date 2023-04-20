@@ -14,7 +14,7 @@
 //   mockUseParams.mockReturnValue({ typeId: 3})
 //   render(
 //     <BrowserRouter>
-//       <CategoryHeader name="normal"/> 
+//       <CategoryHeader name="normal"/>
 //     </BrowserRouter>
 //   )
 //   screen.debug
