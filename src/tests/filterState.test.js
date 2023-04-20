@@ -1,4 +1,4 @@
-import filterState from '../components/FilterState';
+import filterState from '../utils/filterState';
 
 const mockState = [
   {
