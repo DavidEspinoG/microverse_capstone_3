@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--pink-one);
+  color: var(--white);
+  padding: 0 10px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.header h3 {
+  font-family: var(--font);
+  font-weight: 300;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.header-right i {
+  font-size: 15px;
+}
+
+.back-icon {
+  color: white;
+}

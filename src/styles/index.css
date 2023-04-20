@@ -1,0 +1,27 @@
+:root {
+  --pink-one: #f2509c;
+  --pink-two: #d9488b;
+  --pink-three: #a6376b;
+  --light-pink: #f2b6d2;
+  --dark-pink: #592542;
+  --black: #232526;
+  --yellow: #f2bf27;
+  --white: #f2f2f2;
+  --font: 'Lato', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

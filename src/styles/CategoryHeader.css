@@ -1,0 +1,26 @@
+.category-header {
+  height: 120px;
+  background-color: var(--pink-one);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.category-header-text {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.category-header-logo {
+  width: 70px;
+}
+
+.category-header-number {
+  color: var(--white);
+  margin: 0;
+  font-weight: 300;
+}

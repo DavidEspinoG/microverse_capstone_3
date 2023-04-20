@@ -1,0 +1,8 @@
+.main-container {
+  width: 345px;
+  margin: 70px auto;
+  height: 80vh;
+  overflow: scroll;
+  position: relative;
+  border-radius: 10px;
+}

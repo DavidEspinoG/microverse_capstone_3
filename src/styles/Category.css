@@ -1,0 +1,41 @@
+.category {
+  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 17px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.category-link {
+  text-decoration: none;
+}
+
+.light-category {
+  background-color: var(--pink-one);
+}
+
+.dark-category {
+  background-color: var(--pink-two);
+}
+
+.category-name {
+  color: var(--white);
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.category-number {
+  margin: 0;
+  color: var(--white);
+}
+
+.category-logo {
+  width: 45px;
+  fill: red;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
