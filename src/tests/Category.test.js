@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import Category from '../components/Category';
 import store from '../redux/store';
 
-
 describe('Category', () => {
   test('The correct number appears', async () => {
     render(

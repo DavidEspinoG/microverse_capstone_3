@@ -15,7 +15,7 @@ const Category = ({
       setNumber(data.pokemon.length);
     };
     fetchPokemonsNumber();
-  }, []);
+  }, [url]);
 
   return (
     <Link to={to} className="category-link">
