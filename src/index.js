@@ -1,40 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
-import Home from './routes/Home';
-import CategoryDetail from './routes/CategoryDetail';
-import PokemonDetail from './routes/PokemonDetail';
 import store from './redux/store';
-import Categories from './routes/Categories';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />,
-    children: [
-      {
-        path: '/',
-        element: <Categories />,
-      },
-      {
-        path: '/type/:typeId/:typeName',
-        element: <CategoryDetail />,
-      },
-      {
-        path: 'pokemon/:pokemonId',
-        element: <PokemonDetail />,
-      },
-    ],
-  },
-]);
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ReduxProvider>
   </React.StrictMode>,
 );

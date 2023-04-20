@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+.pokemon-feature-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
 .pokemon-detail-image {
   width: 150px;
 }
@@ -21,11 +28,4 @@
   margin: 0;
   color: var(--white);
   text-transform: capitalize;
-}
-
-.pokemon-feature-container {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
 }

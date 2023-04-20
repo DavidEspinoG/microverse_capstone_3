@@ -9,7 +9,7 @@ const CategoryHeader = ({ name }) => {
   const [pokeNumber, setNumber] = useState(0);
   useEffect(() => {
     const fetchPokemonsNumber = async () => {
-      const res = await fetch(`https://pokeapi.co/api/v2/type/${typeId}`);
+      const res = await fetch(`https://pokeapi.co/api/v2/type/${typeId}/`);
       const data = await res.json();
       setNumber(data.pokemon.length);
     };
