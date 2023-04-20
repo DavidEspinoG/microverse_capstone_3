@@ -149,11 +149,13 @@ If you like this project please star this repo.
 
 ## 🙏 Acknowledgments <a id="acknowledgements"></a>
 
-I would like to thank microverse inc. for helping me in my professional carreer. 
+I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio), this application was created inspired in one of his designs. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
+## Loom recording
+
+- [Loom recording](https://www.loom.com/share/d269e459f95b445cbe20d99801a47ffd)
 
 ## 📝 License <a id="license"></a>
 

@@ -3,6 +3,7 @@ import Home from './routes/Home';
 import Categories from './routes/Categories';
 import CategoryDetail from './routes/CategoryDetail';
 import PokemonDetail from './routes/PokemonDetail';
+import './styles/mediaQueries.css';
 
 const App = () => (
   <Routes>
